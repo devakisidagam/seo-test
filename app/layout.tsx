@@ -1,17 +1,16 @@
 import type { Metadata, Viewport } from 'next';
 
-
 type RootLayoutProps = {
   children: React.ReactNode;
 };
 
-const APP_NAME = 'StoryDarpan';
-const APP_DESCRIPTION = 'A website for children to improve creativity and imagination';
+const APP_NAME = 'TestApp';
+const APP_DESCRIPTION = 'A test website for app functionality and SEO testing';
 
 export const metadata: Metadata = {
-  title: { default: APP_NAME, template: '%s | Storydarpan' },
+  title: { default: APP_NAME, template: '%s | TestApp' },
   description: APP_DESCRIPTION,
-  keywords: 'children, creativity, imagination, storytelling, education, kids activities',
+  keywords: 'test, testing, SEOtest, app functionality, york, app development',
   applicationName: APP_NAME,
   appleWebApp: {
     capable: true,
@@ -22,21 +21,21 @@ export const metadata: Metadata = {
     telephone: false,
   },
   openGraph: {
-    url: 'https://storydarpan.com',
-    title: 'StoryDarpan - A World of Creativity',
+    url: 'https://testapp.com',
+    title: 'TestApp - A Test for Functionality',
     description: APP_DESCRIPTION,
     images: [
       {
-        url: 'https://storydarpan.com/og-image.png', // replace with your actual OG image URL
-        alt: 'StoryDarpan OG image',
+        url: 'https://testapp.com/og-image.png', // replace with actual test image URL
+        alt: 'TestApp OG image',
       },
     ],
-    siteName: 'StoryDarpan',
+    siteName: 'TestApp',
   },
   twitter: {
     card: 'summary_large_image',
-    site: '@StoryDarpan',
-    creator: '@StoryDarpan',
+    site: '@TestApp',
+    creator: '@TestAppCreator',
   },
 };
 
@@ -49,10 +48,14 @@ export const viewport: Viewport = {
 const RootLayout = ({ children }: RootLayoutProps) => {
   return (
     <html lang="en">
-      
-      <meta name="robots" content="index, follow" />
-      <meta name="author" content="StoryDarpan" />
-      <link rel="canonical" href="https://storydarpan.com" />
+      <head>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="TestApp" />
+        <link rel="canonical" href="https://testapp.com" />
+        {/* Add Google Analytics Script Here */}
+      </head>
       <body>
         {children}
       </body>
@@ -61,3 +64,4 @@ const RootLayout = ({ children }: RootLayoutProps) => {
 };
 
 export default RootLayout;
+
